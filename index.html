@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Flappybit</title>
+        
+        <link rel="stylesheet" type="text/css" href="//oss.maxcdn.com/semantic-ui/2.1.7/semantic.min.css" />
+        <link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+        
+        <script type="text/javascript" src="//oss.maxcdn.com/socket.io-client/1.3.2/socket.io.min.js"></script>
+        <script type="text/javascript" src="//oss.maxcdn.com/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="//oss.maxcdn.com/semantic-ui/2.1.7/semantic.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="chat">
+            <div id="chatMonitor"></div>
+            
+            <button id="connectButton" onclick="window.location.href='https://www.moneypot.com/oauth/authorize?app_id=852&response_type=token&state=Meh&redirect_uri=https://flappybit-dexon95.c9users.io'">Connect</button>
+            
+            <span id="connectedUsersText"><span id="connectedUsersAmount">0</span> users on FlappyBit</span>
+            <span id="connectionText">Logged in as <span id="username"></span>. <a href="/">Log out</a><br>Balance: <span id="balance"></span> Bits</span>
+        </div>
+        
+        <div id="lineContent">
+            <ul id="line">
+                <li>6.0<small>x</small></li>
+                <li>5.0<small>x</small></li>
+                <li>4.0<small>x</small></li>
+                <li>3.0<small>x</small></li>
+                <li>2.0<small>x</small></li>
+                <li>1.0<small>x</small></li>
+                <li>0.8<small>x</small></li>
+                <li>0.1<small>x</small></li>
+                <li>0.8<small>x</small></li>
+                <li>1.0<small>x</small></li>
+                <li>2.0<small>x</small></li>
+                <li>3.0<small>x</small></li>
+                <li>4.0<small>x</small></li>
+                <li>5.0<small>x</small></li>
+                <li>6.0<small>x</small></li>
+            </ul>
+        </div>
+        
+        <div id="betPanel">
+            <button id="depositButton">Deposit</button>
+            <button id="withdrawButton">Withdraw</button>
+            <input type="number" name="betAmount" id="betAmount" min="1" value="1" step="1"/>
+            <button id="doBetButton">BET</button>
+        </div>
+        
+        <div id="log">
+            <table id="table">
+                <thead>
+                    <tr id="tableTitles">
+                        <th>Id</th>
+                        <th>User</th>
+                        <th>Bet</th>
+                        <th>Multiplier</th>
+                        <th>Profits</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent"></tbody>
+            </table>
+        </div>
+        
+        <script type="text/javascript" src="lib/js/script.js"></script>
+    </body>
+</html>

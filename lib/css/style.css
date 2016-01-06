@@ -1,0 +1,231 @@
+html, body{
+    width: 100%;
+    min-width: 1000px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: #89e68b url(img/bg.jpg) repeat-x;
+    overflow-x: hidden;
+}
+
+button{
+	width: 150px;
+	height: 2em;
+	background: #e06119;
+	border: 1px solid white;
+	box-shadow: 0px 1px 1px #503103;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 20px 20px 20px 0;
+	outline: none;
+}
+
+button:hover{
+	outline: none;
+	cursor: pointer;
+}
+
+.chatMessage{
+	font-family: sans-serif;
+	font-size: 12px;
+	word-wrap: break-word;
+}
+
+.chatMessage small{
+	font-size: 9px;
+}
+
+#chat{
+	background: url(img/chat_bg.png) no-repeat;
+	width: 350px;
+	height: 250px;
+	
+	position: absolute;
+	top: 5px;
+	left: 58%;
+	z-index: 100;
+}
+
+#chatMonitor{
+	width: 342px;
+	height: 209px;
+	
+	overflow-x: hidden;
+	overflow-y: auto;
+	
+	margin: 4px;
+}
+
+#chat input[type="text"]{
+	width: 267px;
+	max-width: 267px;
+	height: 23px;
+	
+	outline: none;
+	border: none;
+	background: #d0d08f;
+	
+	padding: 0 5px;
+	
+	position: absolute;
+	left: 5px;
+	bottom: 6px;
+}
+
+#chat input[type="text"]::-webkit-input-placeholder {
+   color: rgba(0,0,0,0.5);
+}
+
+#chat input[type="text"]:-moz-placeholder { /* Firefox 18- */
+   color: rgba(0,0,0,0.5); 
+}
+
+#chat input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(0,0,0,0.5); 
+}
+
+#chat input[type="text"]:-ms-input-placeholder {  
+   color: rgba(0,0,0,0.5); 
+}
+
+#chat button{
+	width: 70px;
+	
+	margin: 0;
+	
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
+
+#chat #connectionText{
+	font-family: sans-serif;
+	font-size: 12px;
+	position: absolute;
+	bottom: -40px;
+	right: 0;
+	display: none;
+}
+
+#chat #connectedUsersText{
+	font-family: sans-serif;
+	font-size: 12px;
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+}
+
+#connectionText a{
+    color: black;
+	font-weight: bold;
+}
+
+#connectionText a:hover{
+	cursor: pointer;
+}
+
+#connectButton{
+    width: 97.5% !important;
+}
+
+#chatMonitor::-webkit-scrollbar {
+    width: 6px;
+}
+#chatMonitor::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#chatMonitor::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+#chatMonitor::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.2);
+}
+
+#log {
+	background: #dbda96 url(img/table_top_bg.png) repeat-x;
+	background-size: 10px;
+	width: 100%;
+	min-height: calc(100% - 550px);
+	position: absolute;
+	margin-top: 600px;
+	overflow: hidden;
+}
+
+#log #table{
+	width: 75%;
+	margin: 20px auto;
+	
+	outline: 1px solid #523747;
+	border-top: 1px solid #f1f0a5;
+	border-bottom: 1px solid #523747;
+	
+	border-collapse: collapse;
+}
+
+#log #table tbody tr th{
+	width: 20%;
+}
+
+#log #table tbody tr{
+	border-bottom: 1px solid #d2aa4f;
+}
+
+#log #table tbody tr:hover, #log #table tr.marked{
+	background: #d0d08f;
+}
+
+#log #table tr th{
+	color: #d2aa4f;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	text-shadow: 0 2px 0 #f1f0a5;
+}
+
+#log #table tr td{
+	line-height: 100%;
+	text-overflow: ellipsis; overflow: hidden; max-width: 160px; height: 2.5em; white-space: nowrap;
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 12px;
+}
+
+#betPanel{
+	display: none;
+	width: 550px;
+	position: absolute;
+	top: 530px;
+	left: calc(50% - 275px);
+	z-index: 200;
+}
+
+#betAmount{
+	width: 100px;
+}
+
+#doBetButton{
+	width: 80px;
+}
+
+#lineContent{
+	width: 500px;
+	position: absolute;
+	top: 515px;
+	left: calc(50% - 250px);
+}
+
+#line{
+	list-style: none;
+	padding: 0 0 0 5px;
+	margin: 0;
+}
+
+#line li{
+	float: left;
+	margin-left: 7px;
+}
